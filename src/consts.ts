@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'Kitsune Documentation',
+	description: 'Kitsune Documentation',
 	defaultLanguage: 'en-us',
 } as const;
 
@@ -19,9 +19,9 @@ export const KNOWN_LANGUAGES = {
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
+export const GITHUB_EDIT_URL = `https://github.com/kitsune-doc/docs/tree/main`;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const COMMUNITY_INVITE_URL = ``; // TODO: Create Discord server/Matrix room
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -36,11 +36,22 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+		'About': [
+			{ text: 'Introduction', link: 'en/introduction' }
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'Running Kitsune': [
+			{ text: 'Installation', link: 'en/running/installation' },
+			{ text: 'Basic Configuration', link: 'en/running/basic-configuration' }
+		],
+		'Configuring Kitsune': [
+			{ text: 'Cache', link: 'en/configuring/cache' },
+			{ text: 'Database', link: 'en/configuring/database' },
+			{ text: 'Instance', link: 'en/configuring/instance' },
+			{ text: 'Messaging', link: 'en/configuring/messaging' },
+			{ text: 'Job workers', link: 'en/configuring/job-workers' },
+			{ text: 'Search', link: 'en/configuring/search' },
+			{ text: 'Storage', link: 'en/configuring/storage' },
+			{ text: 'OIDC (Single sign-on)', link: 'en/configuring/oidc' },
+		]
 	},
 };
