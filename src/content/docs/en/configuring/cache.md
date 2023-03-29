@@ -23,8 +23,13 @@ This tells Kitsune to cache data directly into its memory. The cache is bounded 
 
 ## Redis Cache
 
-> Enabled by settings the cache property in your configuration to:  
-> `types.Cache.Redis { redis_url = "redis://[Your Redis Instance]" }`
+> Enabled by adding this to your configuration:
+>
+> ```dhall
+> cache = types.Cache.Redis {
+>   redis_url = "redis://[Your Redis Instance]"
+> }
+> ```
 
 This tells Kitsune to cache data via expiring keys into the configured Redis instance.  
 This is the optimal configuration for setups where you have multiple Kitsune nodes running at the same time.
