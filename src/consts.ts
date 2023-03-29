@@ -25,9 +25,9 @@ export const COMMUNITY_INVITE_URL = ``; // TODO: Create Discord server/Matrix ro
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'XXXXXXXXXX',
-	appId: 'XXXXXXXXXX',
-	apiKey: 'XXXXXXXXXX',
+	indexName: 'joinkitsune',
+	appId: '8NTRUXJOUV',
+	apiKey: 'ee18455917eebc32022b1f44ba10bf09',
 };
 
 export type Sidebar = Record<
