@@ -46,9 +46,6 @@ export const SIDEBAR: Sidebar = {
 		'Configuring Kitsune': [
 			{ text: 'Cache', link: 'en/configuring/cache' },
 			{ text: 'Database', link: 'en/configuring/database' },
-			{ text: 'Instance', link: 'en/configuring/instance' },
-			{ text: 'Messaging', link: 'en/configuring/messaging' },
-			{ text: 'Job workers', link: 'en/configuring/job-workers' },
 			{ text: 'Search', link: 'en/configuring/search' },
 			{ text: 'Storage', link: 'en/configuring/storage' },
 			{ text: 'OIDC (Single sign-on)', link: 'en/configuring/oidc' },
