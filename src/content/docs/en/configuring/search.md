@@ -18,6 +18,23 @@ This completely disables the search on your instance. Finding posts and accounts
 
 This runs searches on your database directly. The quality is somewhat low but still acceptable.
 
+## Meilisearch
+
+> Enabled by:
+>
+> 1. Compiling Kitsune with the `meilisearch` feature flag
+> 2. Adding this to your configuration:
+>
+> ```dhall
+> search = types.Search.Meilisearch {
+>     instance_url = "[URL of your Meilisearch instance]"
+>   , api_key = "[API key to access your Meilisearch instance]"
+> }
+> ```
+
+This instructs Kitsune to use [Meilisearch](https://www.meilisearch.com/) as the search engine. Meilisearch provides incredibly fast, high-quality full-text search.  
+Meilisearch also has a cloud offering, making this the easiest high-quality search to use with Kitsune.
+
 ## Custom Search Service
 
 > Enabled by adding this to your configuration:
