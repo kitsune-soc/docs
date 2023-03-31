@@ -11,18 +11,11 @@ Set this parameter to the following value:
 
 ```dhall
 oidc = Some {
-      redirect_uri = "https://[Instance domain]/oidc/callback"
-    , server_url = "[Issuer URL]"
+      server_url = "[Issuer URL]"
     , client_id = "[Kitsune's Client ID]",
     , client_secret = "[Kitsune's Client Secret]"
 }
 ```
-
-## Redirect URI
-
-This is the URI the OIDC server will redirect to after completing the login process. Set this to the schema specified above.  
-
-> This parameter might get removed in the future since we can pretty easily construct this ourselves based on the `url` configuration.
 
 ## Server URL
 
@@ -40,5 +33,5 @@ The OIDC server **must** return the following values in the claim:
 - `preferred_username`
 - `email`
 
-> Keep the preferred username field unique and immutable. The username is used to identify the user inside Kitsune's database that's getting logged in/registered.  
+> Keep the preferred username field unique. The username is used to identify the user inside Kitsune's database that's getting registered.  
 > This might change in the future.
