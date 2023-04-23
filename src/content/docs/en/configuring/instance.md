@@ -1,0 +1,28 @@
+---
+title: "Instance"
+description: "Configure instance-specific settings for Kitsune"
+---
+
+Kitsune has a number of configurations that change how your instance works.
+
+## `name`
+
+This changes the name of the instance displayed on the landing page and returned via instance metadata endpoints (such as Mastodon's `/api/v1/instance`).
+
+## `description`
+
+Similar to `name`, this setting adjusts the description on the landing page and the one returned via the metadata endpoints.
+
+> **Note**: This field is interpreted as raw HTML
+
+## `character_limit`
+
+This setting sets the character limit specific to your instance.
+
+## `registrations_open`
+
+Determines whether your instance accepts new users or not. When set to `false`, the registration APIs will return a failure code.
+
+## `federation_filter`
+
+Find more information about the [federation filter setting](/en/configuring/federation-filter).
