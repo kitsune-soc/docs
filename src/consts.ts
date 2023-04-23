@@ -21,7 +21,7 @@ export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 export const GITHUB_EDIT_URL = `https://github.com/kitsune-soc/docs/tree/main`;
 
-export const COMMUNITY_INVITE_URL = ``; // TODO: Create Discord server/Matrix room
+export const COMMUNITY_INVITE_URL = `https://matrix.to/#/#kitsune-space:matrix.org`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
