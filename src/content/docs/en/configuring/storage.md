@@ -6,6 +6,9 @@ description: "Configure Kitsune's media storage"
 As a microblogging platform, Kitsune also offers users the ability to attach images, videos, and audio to their posts. 
 We offer multiple different storage backends to store the attachments to.
 
+> **Note**: You might want to increase the upload limit by tweaking the `max_upload_size` parameter in your configuration; the number is the upload limit in bytes. 
+> The default set by the example configuration is 5MiB.
+
 ## File System
 
 This is recommended for small instances.  
