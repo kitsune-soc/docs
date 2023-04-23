@@ -39,6 +39,10 @@ export const SIDEBAR: Sidebar = {
 		'About': [
 			{ text: 'Introduction', link: 'en/introduction' }
 		],
+		'Specification': [
+			{ text: 'Webfinger', link: 'en/spec/webfinger' },
+			{ text: 'HTTP signatures', link: 'en/spec/http-signatures' }
+		],
 		'Running Kitsune': [
 			{ text: 'Installation', link: 'en/running/installation' },
 			{ text: 'Basic Configuration', link: 'en/running/basic-configuration' }
