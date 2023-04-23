@@ -51,6 +51,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Cache', link: 'en/configuring/cache' },
 			{ text: 'Database', link: 'en/configuring/database' },
 			{ text: 'Federation filter', link: 'en/configuring/federation-filter' },
+			{ text: 'Job scheduler', link: 'en/configuring/job-scheduler' },
 			{ text: 'Search', link: 'en/configuring/search' },
 			{ text: 'Storage', link: 'en/configuring/storage' },
 			{ text: 'OIDC (Single sign-on)', link: 'en/configuring/oidc' },

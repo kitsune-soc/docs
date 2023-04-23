@@ -10,12 +10,12 @@ Kitsune has a basic federation filter. It has two main modes of operation:
 
 The domain list supports [globbing](https://en.wikipedia.org/wiki/Glob_(programming)), so can, among other things, define wildcard blocks.
 
-# Allowlist
+## Allowlist
 
 As the name might suggests, this mode allows instance administrators to define a set list of domains the server is allowed to interact with.  
 Federation attempts from any other server are rejected.
 
-## Configuration example
+### Configuration example
 
 ```dhall
 federation_filter =
@@ -23,11 +23,11 @@ federation_filter =
     : types.FederationFilter
 ```
 
-# Denylist
+## Denylist
 
 This is the opposite of the allowlist-based federation. In this mode, Kitsune generally accepts federation attempts from any instance *except* the ones defined in the domain list.
 
-## Configuration example
+### Configuration example
 
 ```dhall
 federation_filter =
