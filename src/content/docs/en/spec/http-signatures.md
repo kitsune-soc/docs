@@ -12,7 +12,7 @@ Only asymmetric cryptographic algorithms are implemented since the symmetric one
 2. Aren't useful in the context of ActivtyPub
 
 We make use of the `keyId` field by looking up the public key material via this ID. The ID is sourced from the ActivityPub actor.  
-The signature scheme used is inferred by the OID embedded in the public key material. The material is expected to be a PKCS#8 encoded public key.
+The signature scheme used is inferred by the OID embedded in the public key material. The material is expected to be an X.509 SPKI structure.
 
 At the moment, Kitsune uses RSA keys but has support for implementations that use Ed25519 for signatures.
 
