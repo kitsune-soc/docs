@@ -3,6 +3,8 @@ title: Search
 description: Configuring Kitsune's search features
 ---
 
+> This feature is gated behind the `kitsune-search` compile-time feature, but enabled by default
+
 Kitsune has a number of search backends, each different from the other, to best fit your specific needs. 
 We want to give you a brief overview over the available backends.
 

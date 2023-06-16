@@ -18,14 +18,14 @@ in    { cache =
             types.Cache.InMemory
           : types.Cache
       , database =
-            { url = "sqlite://kitsune.db", max_connections = 20 }
+            { url = "postgres://localhost/kitsune", max_connections = 20 }
           : types.Database
       , instance =
             { name = "Kitsune"
             , description = "https://www.youtube.com/watch?v=6lnnPnr_0SU"
             , character_limit = 5000
             , federation_filter =
-                types.FederationFilter.Deny { domains = [] : List Text }
+                  types.FederationFilter.Deny { domains = [] : List Text }
                 : types.FederationFilter
             , registrations_open = True
             }
@@ -39,6 +39,7 @@ in    { cache =
             , oidc = None types.Oidc
             , port = 5000
             , prometheus_port = 9000
+            , request_timeout_sec = 60
             }
           : types.Server
       , search = types.Search.Sql

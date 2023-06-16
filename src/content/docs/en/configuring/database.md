@@ -3,31 +3,14 @@ title: "Database"
 description: "Kitsune Database Configuration"
 ---
 
-The choice of database depends on your requirements and possibly already available environment. 
-In general, we recommend using [PostgreSQL](https://postgresql.org/).  
-There is no manual step for applying migrations; database migrations are automatically applied when starting Kitsune up.
+Kitsune requires a PostgreSQL installation that it can connect to since we make usage of Postgres-specific features, such as their full-text search.
 
-## Supported databases
-
-- PostgreSQL
-
-    - Recommended for most users
-    - Tested locally by the developers
-
-- SQLite
-
-    - Recommended for small low-traffic instances
-    - Runs in our CI
-
-- MySQL/MariaDB
-
-    - Should *technically* work
-    - Untested; therefore not recommended for production
+> We supported SQLite in the past (before v0.0.1-pre.1), but the support has been dropped due to a high maintenance burden and rather little expected usage.
 
 ## Database URL structure
 
 ```
-[DBMS]://[Username]:[Password]@[DBMS host]:[Port]/[Database name]
+postgres://[Username]:[Password]@[DBMS host]:[Port]/[Database name]
 ```
 
 ## Maximum connections
