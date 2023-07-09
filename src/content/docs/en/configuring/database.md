@@ -4,6 +4,7 @@ description: "Kitsune Database Configuration"
 ---
 
 Kitsune requires a PostgreSQL installation that it can connect to since we make usage of Postgres-specific features, such as their full-text search.
+You can find instructions for creating a database [here](https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e)
 
 > We supported SQLite in the past (before v0.0.1-pre.1), but the support has been dropped due to a high maintenance burden and rather little expected usage.
 
@@ -11,6 +12,10 @@ Kitsune requires a PostgreSQL installation that it can connect to since we make 
 
 ```
 postgres://[Username]:[Password]@[DBMS host]:[Port]/[Database name]
+```
+# Example URL structure:
+```
+{ url = "postgres://database-user:password-here@localhost:5432/db-name-here", max_connections = 20 }
 ```
 
 ## Maximum connections
