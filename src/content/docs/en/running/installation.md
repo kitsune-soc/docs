@@ -16,7 +16,7 @@ In order to build Kitsune, need a few dependencies. These are:
 4. Redis for the job queue
 5. [NodeJS](https://nodejs.org/en) v16+
 6. [Yarn](https://yarnpkg.com/getting-started/install)
-7. Reverse Proxy (recommended: [caddy](https://caddyserver.com/docs/install))
+7. Reverse Proxy (recommended: [Caddy](https://caddyserver.com/docs/install))
 
 Yes, that's really it. We don't need more. Kitsune is designed to use as few native dependencies as possible to make building from source easy!
 
