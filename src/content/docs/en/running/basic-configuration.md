@@ -10,7 +10,7 @@ We recommend every Kitsune administrator to make themselves familiar with basic 
 > The auxiliary services/CLI tools are using environment variables at the moment. 
 > Note that this might change in the future.
 
-> Example configurations for some of the dependencies can be found in kitsune/contrib.
+> Example configurations for external programs can be found in kitsune/contrib.
 
 > The example config for Kitsune can be found in the root directory titled "config.example.dhall", move it wherever you like, and feel free to rename it. 
 (If you move it make sure to edit the "let types =" value accordingly)
