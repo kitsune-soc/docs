@@ -60,9 +60,10 @@ To successfully deploy the application, make sure you **at least** change the fo
 
 - `database`
 
-  - Specifically the url section. Refer to database section under configuring for proper setup.
+  - Specifically the `url` parameter. Refer to [database section](../configuring/database) page for the expected format.
 
 To run the application use the following command:
+
 ```bash
 ./kitsune [path-to-config-file]
 ```
