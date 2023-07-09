@@ -46,7 +46,8 @@ git clone https://github.com/kitsune-soc/kitsune.git
 
 > If you downloaded the ZIP, just unzip the archive
 
-Next, move into the newly created directory and then move into the `kitsune-fe` directory and run:
+Next, move into the newly created directory and then into the `kitsune-fe` directory and build the frontend. 
+To do this run:
 
 ```bash
 yarn install && yarn build
