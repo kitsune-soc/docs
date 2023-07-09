@@ -40,7 +40,7 @@ yarn install && yarn build
 ```
 
 
-Now cd out of the directory and back into the main one. Then build the binaries in release mode.  
+Now move out of the directory and back into the main one. Then build the binaries in release mode.  
 To do this run the following command:
 
 ```bash
