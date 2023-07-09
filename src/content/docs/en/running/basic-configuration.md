@@ -8,8 +8,11 @@ to add new features and make them easily configurable.
 We recommend every Kitsune administrator to make themselves familiar with basic Dhall syntax.
 
 > The auxiliary services/CLI tools are using environment variables at the moment. 
-> Note that this might change at the future.
-> Example config can be found in the root directory titled "config.example.dhall", move it wherever you like and name it whatever you like. Be sure to back it up. 
+> Note that this might change in the future.
+
+> Example configurations for some of the dependencies can be found in kitsune/contrib.
+
+> The example config for Kitsune can be found in the root directory titled "config.example.dhall", move it wherever you like, and feel free to rename it. 
 (If you move it make sure to edit the "let types =" value accordingly)
 
 The simplest Kitsune configuration looks like this:
