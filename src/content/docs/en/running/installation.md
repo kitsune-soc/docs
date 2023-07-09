@@ -12,10 +12,24 @@ In order to build Kitsune, need a few dependencies. These are:
 
 1. The Rust toolchain ([recommended installation](https://rustup.rs/))
 2. Recent Protobuf compiler ([installation guide](https://grpc.io/docs/protoc-installation/))
-3. (optional) PostgreSQL/MySQL as a dedicated DBMS
-4. (optional) Redis for caching and its PubSub functionality
+3. PostgreSQL as a dedicated DBMS
+4. Redis for the job queue
+5. [NodeJS](https://nodejs.org/en) v16+
+6. [Yarn](https://yarnpkg.com/getting-started/install)
 
 Yes, that's really it. We don't need more. Kitsune is designed to use as few native dependencies as possible to make building from source easy!
+
+### Note on C/C++ compiler requirement
+
+Rust needs a C/C++ compiler to invoke the linker and potentially build some native libraries to statically link to, so make sure you have one installed.
+
+To install it under Debian and Ubuntu, run the following command:
+
+```bash
+sudo apt install build-essential
+```
+
+The name of the package(s) containing these tools might differ between distributions.
 
 ## Building
 
@@ -31,7 +45,13 @@ git clone https://github.com/kitsune-soc/kitsune.git
 
 > If you downloaded the ZIP, just unzip the archive
 
-Next, move into the newly created directory and build the binaries in release mode.  
+Next, move into the newly created directory and then move into the `kitsune-fe` directory and run:
+
+```bash
+yarn install && yarn build
+```
+
+Now move out of the directory and back into the main one. Then build the binaries in release mode.  
 To do this run the following command:
 
 ```bash

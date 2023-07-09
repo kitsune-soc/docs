@@ -9,6 +9,8 @@ We recommend every Kitsune administrator to make themselves familiar with basic 
 
 > The auxiliary services/CLI tools are using environment variables at the moment. 
 > Note that this might change at the future.
+> Example config can be found in the root directory titled "config.example.dhall", move it wherever you like and name it whatever you like. Be sure to back it up. 
+(If you move it make sure to edit the "let types =" value accordingly)
 
 The simplest Kitsune configuration looks like this:
 
@@ -55,5 +57,15 @@ To successfully deploy the application, make sure you **at least** change the fo
 
   - Domain of your instance. Used to build the URLs of your activities.
   - This is a *very important* setting and **cannot** be changed after the first setup.
+
+- `database`
+
+  - Specifically the `url` parameter. Refer to [database section](../configuring/database) page for the expected format.
+
+To run the application use the following command:
+
+```bash
+./kitsune [path-to-config-file]
+```
 
 In order to read up on all the possible configurations, check out the "Configuration" section.
