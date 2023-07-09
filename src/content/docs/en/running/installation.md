@@ -14,8 +14,8 @@ In order to build Kitsune, need a few dependencies. These are:
 2. Recent Protobuf compiler ([installation guide](https://grpc.io/docs/protoc-installation/))
 3. PostgreSQL/MySQL as a dedicated DBMS
 4. Redis for caching and its PubSub functionality
-5. ([Nodejs](https://nodejs.org/en)) Version 19
-6. ([Yarn](https://yarnpkg.com/getting-started/install))
+5. [Nodejs](https://nodejs.org/en) Version 19
+6. [Yarn](https://yarnpkg.com/getting-started/install)
 7. (optional) [vue-tcs](https://www.npmjs.com/package/vue-tsc) Install with npm(Should come with nodejs)
 
 Yes, that's really it. We don't need more. Kitsune is designed to use as few native dependencies as possible to make building from source easy!
