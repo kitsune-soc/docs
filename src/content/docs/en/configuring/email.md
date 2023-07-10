@@ -28,7 +28,7 @@ Here is an example utilized the optional config:
 Now going over it in a bit more detail.
 
 
-starttls :
+```starttls``` :
 By default Kitsune users the port 465 to send mail. Most service providers also use this port, but some(for example postmark) use the port 587. 
 
 from_address :
