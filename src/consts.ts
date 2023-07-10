@@ -54,6 +54,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Instance', link: 'en/configuring/instance' },
 			{ text: 'Job scheduler', link: 'en/configuring/job-scheduler' },
 			{ text: 'Messaging', link: 'en/configuring/messaging' },
+			{ text: 'Email Sending', link: 'en/configuring/email' },
 			{ text: 'Search', link: 'en/configuring/search' },
 			{ text: 'Storage', link: 'en/configuring/storage' },
 			{ text: 'OIDC (Single sign-on)', link: 'en/configuring/oidc' },
