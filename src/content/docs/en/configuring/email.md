@@ -31,12 +31,12 @@ Now going over it in a bit more detail.
 ```starttls``` :
 By default Kitsune users the port 465 to send mail. Most service providers also use this port, but some(for example postmark) use the port 587. 
 
-from_address :
+```from_address``` :
 This is the address kitsune uses to send mail
 
-host : 
+```host``` : 
 This is the domain that your smtp server is hosted on.
 
-username password :
+```username, password``` :
 The password and username of your smpt server. This could also be an key of some kind, both should work. 
 Currently REST API is not supported.
