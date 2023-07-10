@@ -17,7 +17,7 @@ Now the example:
 , url = Some {}
 ```
 There is also an option config you can place in front of "from_address" if your email service provider does not do TLS over 465 and instead uses 587(STARTTLS).
-Here is an example utilized the optional config:
+Here is an example configuration utilizing starttls:
 
 ```
 , storage =
