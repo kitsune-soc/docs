@@ -11,7 +11,7 @@ This configuration must be placed in the section of the config file where URL & 
 
 Now the example:
 
-```
+```dhall
 , storage =
 , email = Some { from_address = "kitsunemailer@joinkitsune.org", host = "your.smtp.host", username = "admin", password = "password" }
 , url = Some {}
@@ -19,7 +19,7 @@ Now the example:
 There is also an option config you can place in front of "from_address" if your email service provider does not do TLS over 465 and instead uses 587(STARTTLS).
 Here is an example configuration utilizing starttls:
 
-```
+```dhall
 , storage =
 , email = Some { starttls = True, from_address = "kitsunemailer@joinkitsune.org", host = "your.smtp.host", username = "admin", password = "password" }
 , url = Some {}
