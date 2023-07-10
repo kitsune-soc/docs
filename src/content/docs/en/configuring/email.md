@@ -1,42 +1,57 @@
 ---
-title: Email Verification
-description: Configuring email verification for Kitsune
+title: Emailing
+description: Configuring an Email server for Kitsune
 ---
 
-This page documents the email verification functionality of kitsune & how to set it up.
+Configuring an Email server for Kitsune automatically enables account confirmation via Email.
 
-## Example:
+The mailer currently only supports SMTP, no provider-specific REST APIs.
 
-This configuration must be placed in the section of the config file where URL & Storage are positioned.
+## Example
+
+This configuration must be placed in the section of the config file where URL & Storage are positioned (see the example configuration file for reference).
 
 Now the example:
 
 ```dhall
-, storage =
-, email = Some { from_address = "kitsunemailer@joinkitsune.org", host = "your.smtp.host", username = "admin", password = "password" }
-, url = Some {}
+email = Some { 
+      from_address = "kitsunemailer@joinkitsune.org"
+    , host = "your.smtp.host"
+    , username = "admin"
+    , password = "password"
+}
 ```
-There is also an option config you can place in front of "from_address" if your email service provider does not do TLS over 465 and instead uses 587(STARTTLS).
-Here is an example configuration utilizing starttls:
+
+There is also an option config you can place in front of "from_address" if your email service provider does not do TLS over 465 and instead uses 587 (STARTTLS).
+
+Here is an example configuration utilizing STARTTLS:
 
 ```dhall
-, storage =
-, email = Some { starttls = True, from_address = "kitsunemailer@joinkitsune.org", host = "your.smtp.host", username = "admin", password = "password" }
-, url = Some {}
+email = Some {
+      starttls = True
+    , from_address = "kitsunemailer@joinkitsune.org"
+    , host = "your.smtp-host.example"
+    , username = "admin"
+    , password = "password"
+}
 ```
 
-Now going over it in a bit more detail.
-
+## Parameters
 
 ```starttls``` :
-By default Kitsune users the port 465 to send mail. Most service providers also use this port, but some(for example postmark) use the port 587. 
+
+By default Kitsune users the port 465 to send mail. 
+
+Most service providers use this port, but some (for example Postmark) need to have their TLS usage bootstrapped via STARTTLS over port 587. 
 
 ```from_address``` :
-This is the address kitsune uses to send mail
+
+This is the address Kitsune puts into the `From` field of the Email
 
 ```host``` : 
-This is the domain that your smtp server is hosted on.
+
+This is the domain that your SMTP server is reachable under.
 
 ```username, password``` :
-The password and username of your smpt server. This could also be an key of some kind, both should work. 
-Currently REST API is not supported.
+
+The credentials to your SMTP server. Which values to put here vary from provider to provider.
