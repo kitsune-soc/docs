@@ -49,15 +49,18 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Configuring Kitsune': [
 			{ text: 'Cache', link: 'en/configuring/cache' },
+			{ text: 'Captcha', link: 'en/configuring/captcha' },
 			{ text: 'Database', link: 'en/configuring/database' },
 			{ text: 'Emailing', link: 'en/configuring/email' },
 			{ text: 'Federation filter', link: 'en/configuring/federation-filter' },
 			{ text: 'Instance', link: 'en/configuring/instance' },
 			{ text: 'Job scheduler', link: 'en/configuring/job-scheduler' },
+			{ text: 'Link embedding', link: 'en/configuring/link-embedding' },
 			{ text: 'Messaging', link: 'en/configuring/messaging' },
+			{ text: 'OIDC (Single sign-on)', link: 'en/configuring/oidc' },
+			{ text: 'OpenTelemetry', link: 'en/configuring/opentelemetry' },
 			{ text: 'Search', link: 'en/configuring/search' },
 			{ text: 'Storage', link: 'en/configuring/storage' },
-			{ text: 'OIDC (Single sign-on)', link: 'en/configuring/oidc' },
 		]
 	},
 };
