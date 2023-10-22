@@ -12,10 +12,10 @@ This is backend you should choose when running multiple nodes in parallel. This 
 
 ### Configuration example
 
-```dhall
-messaging = types.Messaging.Redis {
-    redis_url = "redis://localhost:6379"
-}
+```toml
+[messaging]
+type = "redis"
+redis-url = "redis://localhost:6379"
 ```
 
 ## In-process
@@ -24,6 +24,6 @@ This backend is optimal for small self-contained installations. It uses Tokio's 
 
 ### Configuration example
 
-```dhall
-messaging = types.Messaging.InProcess
-```
+```toml
+[messaging]
+type = "in-process"
