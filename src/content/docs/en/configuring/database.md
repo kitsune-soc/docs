@@ -22,7 +22,7 @@ postgres://database-user:password-here@localhost:5432/db-name-here
 
 ## Maximum connections
 
-The `max_connections` setting defines how many connections the globally shared connection pool will open to the database server *at maximum*.  
+The `max-connections` setting defines how many connections the globally shared connection pool will open to the database server *at maximum*.  
 What you should set this value to depends on many factors.
 
 > We currently do not report any pool metrics via the Prometheus endpoint. This might be added in the future.
