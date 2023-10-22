@@ -3,49 +3,37 @@ title: Search
 description: Configuring Kitsune's search features
 ---
 
-> This feature is gated behind the `kitsune-search` compile-time feature, but enabled by default
-
 Kitsune has a number of search backends, each different from the other, to best fit your specific needs. 
 We want to give you a brief overview over the available backends.
 
 ## No Search
 
-> Enabled by setting the search property in your configuration to `types.Search.None`
+```toml
+[search]
+type = "none"
+```
 
 This completely disables the search on your instance. Finding posts and accounts is now only possible via direct links and handles.
 
 ## SQL-based Search
 
-> Enabled by setting the search property in your configuration to `types.Search.Sql`
+```toml
+[search]
+type = "sql"
+```
 
-This runs searches on your database directly. The quality is somewhat low but still acceptable.
+This runs searches on your database directly. The quality is actually not too bad and uses automatic language detection to make full-text searches relevant.
 
 ## Meilisearch
 
-> Enabled by:
->
-> 1. Compiling Kitsune with the `meilisearch` feature flag
-> 2. Adding this to your configuration:
->
-> ```dhall
-> search = types.Search.Meilisearch {
->     instance_url = "[URL of your Meilisearch instance]"
->   , api_key = "[API key to access your Meilisearch instance]"
-> }
-> ```
+> You need to compile Kitsune with the `meilisearch` feature flag to enable this feature
+
+```toml
+[search]
+type = "meilisearch"
+instance-url = "[URL of your Meilisearch instance]"
+api-key = "[API key to access your Meilisearch instance]"
+```
 
 This instructs Kitsune to use [Meilisearch](https://www.meilisearch.com/) as the search engine. Meilisearch provides incredibly fast, high-quality full-text search.  
 Meilisearch also has a cloud offering, making this the easiest high-quality search to use with Kitsune.
-
-## Custom Search Service
-
-> Enabled by adding this to your configuration:
-> 
-> ```dhall
-> search = types.Search.Kitsune {
->     index_server = "[URL to your index server]"
->   , search_servers = ["[URLs to your search servers]"] 
-> }
-> ```
-
-This setting utilises the custom Kitsune search service. This will likely be faster than your SQL-based search and makes searches typo-tolerant.

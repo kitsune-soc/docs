@@ -11,12 +11,11 @@ Don't worry, that sounds way more scary than it actually is. In this guide we wi
 In order to build Kitsune, need a few dependencies. These are:
 
 1. The Rust toolchain ([recommended installation](https://rustup.rs/))
-2. Recent Protobuf compiler ([installation guide](https://grpc.io/docs/protoc-installation/))
-3. PostgreSQL as a dedicated DBMS
-4. Redis for the job queue
-5. [NodeJS](https://nodejs.org/en) v16+
-6. [Yarn](https://yarnpkg.com/getting-started/install)
-7. Reverse Proxy (recommended: [Caddy](https://caddyserver.com/docs/install))
+2. PostgreSQL as a dedicated DBMS
+3. Redis for the job queue
+4. [NodeJS](https://nodejs.org/en) v16+
+5. [Yarn](https://classic.yarnpkg.com/en/docs/install)
+6. Reverse Proxy (recommended: [Caddy](https://caddyserver.com/docs/install))
 
 Yes, that's really it. We don't need more. Kitsune is designed to use as few native dependencies as possible to make building from source easy!
 
@@ -64,6 +63,6 @@ After the command finished there should be the following three binaries inside t
 
 - `kitsune`: The main Kitsune application. This is the heart of the whole application.
 - `kitsune-cli`: The Kitsune CLI utility. Used to give users roles and clear the job scheduler table.
-- `kitsune-search`: The Kitsune search service. This service is responsible for providing the advertised fast full-text search.
+- `kitsune-job-runner`: The dedicated Kitsune job runner
 
 That's it for the building part but before we can actually run our instance, we need to configure it first.

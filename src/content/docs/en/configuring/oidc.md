@@ -11,12 +11,11 @@ This is useful if you, for example, want to run Kitsune together with a bunch of
 In order to enable OIDC for your Kitsune instance, find the `oidc` parameter inside the `server` configuration section. 
 Set this parameter to the following value:
 
-```dhall
-oidc = Some {
-      server_url = "[Issuer URL]"
-    , client_id = "[Kitsune's Client ID]",
-    , client_secret = "[Kitsune's Client Secret]"
-}
+```toml
+[oidc]
+server-url = "[Issuer URL]"
+client-id = "[Kitsune's Client ID]"
+client-secret = "[Kitsune's Client Secret]"
 ```
 
 ## Server URL

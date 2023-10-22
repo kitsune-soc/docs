@@ -9,31 +9,26 @@ The mailer currently only supports SMTP, no provider-specific REST APIs.
 
 ## Example
 
-This configuration must be placed in the section of the config file where URL & Storage are positioned (see the example configuration file for reference).
-
-Now the example:
-
-```dhall
-email = Some { 
-      from_address = "kitsunemailer@joinkitsune.org"
-    , host = "your.smtp.host"
-    , username = "admin"
-    , password = "password"
-}
+```toml
+[email]
+from-address = "kitsunemailer@joinkitsune.org"
+host = "your.smtp.host"
+username = "admin"
+password = "password"
+starttls = false
 ```
 
 There is also an option config you can place in front of "from_address" if your email service provider does not do TLS over 465 and instead uses 587 (STARTTLS).
 
 Here is an example configuration utilizing STARTTLS:
 
-```dhall
-email = Some {
-      starttls = True
-    , from_address = "kitsunemailer@joinkitsune.org"
-    , host = "your.smtp-host.example"
-    , username = "admin"
-    , password = "password"
-}
+```toml
+[email]
+from_address = "kitsunemailer@joinkitsune.org"
+host = "your.smtp-host.example"
+username = "admin"
+password = "password"
+starttls = true
 ```
 
 ## Parameters
@@ -44,7 +39,7 @@ By default Kitsune users the port 465 to send mail.
 
 Most service providers use this port, but some (for example Postmark) need to have their TLS usage bootstrapped via STARTTLS over port 587. 
 
-```from_address``` :
+```from-address``` :
 
 This is the address Kitsune puts into the `From` field of the Email
 

@@ -6,7 +6,19 @@ description: "Configure Kitsune's job scheduler"
 Kitsune uses the database to store and retrieve jobs that have to be run. 
 There are options to tune the job scheduler to your specific needs.
 
-## `job_workers`
+```toml
+[job-queue]
+redis-url = "redis://localhost"
+num-workers = 20
+```
+
+## `redis-url`
+
+This option configures the Redis instance that the jobs are put on.
+
+We utilize Redis streams and transactional Lua scripting to ensure no jobs are lost even in the case of a crash.
+
+## `job-workers`
 
 This option configures how many jobs are run concurrently at the same time.  
 
