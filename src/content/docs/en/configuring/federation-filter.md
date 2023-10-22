@@ -17,10 +17,10 @@ Federation attempts from any other server are rejected.
 
 ### Configuration example
 
-```dhall
-federation_filter =
-    types.FederationFilter.Allow { domains = ["*.myfriends.com", "cool-instan.ce"] }
-    : types.FederationFilter
+```toml
+[instance.federation-filter]
+type = "allow" 
+domains = ["*.myfriends.com", "cool-instan.ce"]
 ```
 
 ## Denylist
@@ -29,8 +29,8 @@ This is the opposite of the allowlist-based federation. In this mode, Kitsune ge
 
 ### Configuration example
 
-```dhall
-federation_filter =
-    types.FederationFilter.Deny { domains = ["*.badstuff.com", "mean-people.biz"] }
-    : types.FederationFilter
+```toml
+[instance.federation-filter]
+type = "deny"
+domains = ["*.badstuff.com", "mean-people.biz"]
 ```
