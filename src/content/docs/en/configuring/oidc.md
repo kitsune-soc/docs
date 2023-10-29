@@ -12,7 +12,7 @@ In order to enable OIDC for your Kitsune instance, find the `oidc` parameter ins
 Set this parameter to the following value:
 
 ```toml
-[oidc]
+[server.oidc]
 server-url = "[Issuer URL]"
 client-id = "[Kitsune's Client ID]"
 client-secret = "[Kitsune's Client Secret]"
